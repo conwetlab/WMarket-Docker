@@ -7,7 +7,7 @@ Stating on version 4.3.3, you are able to run WMarket with Docker. As you may kn
 You can install WMarket automatically if you have `docker-compose` installed in your machine. To do so, you must create a folder to place a new file file called `docker-compose.yml` that should include the following content:
 
 ```
-mysql:
+wmarket_db:
     restart: always
     image: mysql:latest
     volumes:
@@ -24,7 +24,7 @@ wmarket:
     ports:
         - "80:8080"
     links:
-        - mysql:wmarket_db
+        - wmarket_db
 ```
 
 Once that you have created the file, run the following command:
